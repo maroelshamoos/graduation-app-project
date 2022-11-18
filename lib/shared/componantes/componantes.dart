@@ -20,7 +20,7 @@ Widget DefaultButton ({
       child: MaterialButton(
         child: Text(
           isUppercase ? text.toUpperCase() : text ,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20.0 ,
             fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ Widget DefaultFormfield ({
       IconButton(onPressed:(){
         sufpressed!();
       }, icon: Icon(sufix))  : null ,
-      border: OutlineInputBorder(),
+      border: const OutlineInputBorder(),
   ),
 );
 

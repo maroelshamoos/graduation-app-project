@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
                               function:(){
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterScreen() ));
                               },
-                              text: 'Register',
+                              text: 'Signup',
                               backgroundcolor: Color(0xFFC2185B),
                             ),
                           ],

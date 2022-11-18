@@ -24,7 +24,7 @@ class AppCubit extends Cubit<AppStates>{
     UserScreen(),
   ];
   List<String>titles = [
-    'Hello',
+    'Home',
     'Cart',
     'Map',
     'Profile'

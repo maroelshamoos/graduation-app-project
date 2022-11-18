@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             );
                           }
                           , child: const Text(
-                        'Register Now',
+                        'Sign UP Now',
                         style: TextStyle(
                             fontSize: 16
                         ),
