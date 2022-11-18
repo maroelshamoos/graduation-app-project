@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:graduationapp/layout/home_layout.dart';
 import 'package:graduationapp/moduls/home/home_screen.dart';
 import 'package:graduationapp/moduls/register/register_screen.dart';
+import 'package:graduationapp/shared/cloud_functions/get_products.dart';
 import 'package:graduationapp/shared/componantes/componantes.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -16,6 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   var passwordcontroller = TextEditingController();
   var formkey = GlobalKey<FormState>();
   bool is_obsecure = true ;
+  Products p = Products();
 
   @override
   Widget build(BuildContext context) {
@@ -81,15 +83,17 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   DefaultButton(
                     backgroundcolor: Color(0xFFC2185B),
-                      function: (){
-                        if(formkey.currentState!.validate()){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => HomeLayoutScreen())
-                          );
-                          print(emailcontroller.text);
-                          print(passwordcontroller.text);
-                        }
+                      function: () async {
+                        await p.getproducts();
+                        // if(formkey.currentState!.validate()){
+                        //   await p.getproducts();
+                        //   Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(builder: (context) => HomeLayoutScreen())
+                        //   );
+                        //   print(emailcontroller.text);
+                        //   print(passwordcontroller.text);
+                        // }
                         },
                       text: 'login'
                   ),
